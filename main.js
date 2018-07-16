@@ -40,7 +40,7 @@ app.on('window-all-closed', () =>{
 })
 
 // For MacOS Reopen window
-app.on('activate', function(){
+app.on('activate', () => {
 	if(win === null)
 	{
 		createWindow();

@@ -1,0 +1,14 @@
+{
+  "name": "electron_demo",
+  "version": "1.0.0",
+  "description": "Demo App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Vishal",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^2.0.5"
+  }
+}

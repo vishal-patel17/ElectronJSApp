@@ -1,0 +1,29 @@
+#signup
+{
+    margin-left: 50px;
+}
+body
+{
+    background-color: green;
+}
+#logo
+{
+    margin-top: 80px;
+}
+.btn-success
+{
+     margin-top: 30px;
+}
+.btn-primary
+{
+     margin-top: 30px;
+}
+.footer
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: right;
+}

@@ -1,9 +1,11 @@
 const {app, BrowserWindow} = require('electron');
+const { ipcMain } = require('electron');
 const path = require('path');
 const url = require('url');
 
 // init win
 let win;
+let loginWin;
 
 function createWindow()
 {
@@ -25,8 +27,29 @@ function createWindow()
 
 	win.on('closed', () => {
 		win = null;
+		loginWin.close();
 	})
 }
+
+function createLoginWindow()
+{
+	loginWin = new BrowserWindow({
+		width: 500,
+		height: 400
+	});
+	loginWin.loadURL(url.format({
+		pathname: path.join(__dirname, 'login.html'),
+		protocol: 'file',
+		slashes: true
+	}));
+	loginWin.on('closed', () => {
+		loginWin = null;
+	});
+}
+
+ipcMain.on('btnlogin', function(){
+	createLoginWindow();
+});
 
 // Run Created Window
 app.on('ready', createWindow);
